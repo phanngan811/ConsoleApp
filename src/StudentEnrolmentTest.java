@@ -11,6 +11,8 @@ import java.nio.file.Path;
 import static org.junit.Assert.*;
 
 public class StudentEnrolmentTest {
+    public static StudentEnrolment se = new StudentEnrolment();
+    InputStream sysInBackup = System.in;
 
     @Before
     public void setUp() throws Exception {
@@ -24,7 +26,6 @@ public class StudentEnrolmentTest {
     @Test
     public void loadInfo() throws IOException {
         String expected = "The program is loading";
-        StudentEnrolment se = new StudentEnrolment();
         String result = se.loadInfo();
         assertEquals(expected, result);
     }
@@ -40,8 +41,26 @@ public class StudentEnrolmentTest {
 
     @Test
     public void studentEnroll() {
-        StudentEnrolment se= new StudentEnrolment();
 
+        ByteArrayInputStream idStudent = new ByteArrayInputStream("s3863893".getBytes());
+        System.setIn(idStudent);
+        ByteArrayInputStream name = new ByteArrayInputStream("Phan Ngan".getBytes());
+        System.setIn(name);
+        ByteArrayInputStream birthdate = new ByteArrayInputStream("08/11/2001".getBytes());
+        System.setIn(birthdate);
+        ByteArrayInputStream idCourse = new ByteArrayInputStream("SOE123".getBytes());
+        System.setIn(idCourse);
+        ByteArrayInputStream nameCourse = new ByteArrayInputStream("JAVA PROGRAMMING".getBytes());
+        System.setIn(nameCourse);
+        ByteArrayInputStream noCredit = new ByteArrayInputStream("2".getBytes());
+        System.setIn(noCredit);
+        ByteArrayInputStream semester = new ByteArrayInputStream("2021A".getBytes());
+        System.setIn(semester);
+        assertEquals(idStudent,name);
+
+        assertEquals("My string1", se.getInput());
+// optionally, reset to its original
+        System.setIn(sysInBackup);
     }
 
 

@@ -14,7 +14,8 @@ public class StudentEnrolment implements StudentEnrolmentManager {
         this.courseList = new ArrayList<Course>();
     }
 
-    public StudentEnrolment() {
+    public StudentEnrolment() {{
+    }
     }
 
 
