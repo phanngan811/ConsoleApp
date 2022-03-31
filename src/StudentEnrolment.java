@@ -198,11 +198,9 @@ public class StudentEnrolment implements StudentEnrolmentManager {
     public void viewCourseEnrolled() {
         System.out.print("Enter student ID to see the course enrolled: ");
         String idStudent = sc.nextLine();
-        System.out.println("Enter the semester you want to see the courses which enrolled: ");
-        String semester = sc.nextLine();
         boolean checkIdAndCourse = false;
         for (int i = 0; i < studentList.size(); i++) {
-            if ((studentList.get(i).getIdStudent().contains(idStudent)) && semesterList.get(i).contains(semester) ) {
+            if ((studentList.get(i).getIdStudent().contains(idStudent)) ) {
                 checkIdAndCourse =true;
                 System.out.println(semesterList.get(i)+": "+ courseList.get(i).toString().replaceAll(";"," "));
             }

@@ -56,8 +56,6 @@ public class StudentEnrolmentTest {
         ByteArrayInputStream semester = new ByteArrayInputStream("2021A".getBytes());
         System.setIn(semester);
 
-
-
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
         System.setOut(printStream);
