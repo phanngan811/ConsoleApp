@@ -68,9 +68,6 @@ public class StudentEnrolmentTest {
         System.setIn(sysInBackup);
     }
 
-
-
-
     @Test
     public void update() {
     }
@@ -79,7 +76,12 @@ public class StudentEnrolmentTest {
     public void deleteEnroll() throws IOException {
         StudentEnrolment se = new StudentEnrolment();
         se.loadInfo();
-        se.enterIdStudent().contentEquals("1222");
-        assertEquals("Remove 1 Info from data",se.loadInfo(),se.deleteEnroll());
+        ByteArrayInputStream idStudent = new ByteArrayInputStream("S101312".getBytes());
+        System.setIn(idStudent);
+
+        String expected ="A student and a course  are deleted";
+        assertEquals(expected,se.deleteEnroll());
+        // optionally, reset to its original
+        System.setIn(sysInBackup);
     }
 }
