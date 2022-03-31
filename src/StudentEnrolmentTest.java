@@ -3,9 +3,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.file.Path;
 
 import static org.junit.Assert.*;
@@ -41,9 +39,10 @@ public class StudentEnrolmentTest {
 
     @Test
     public void studentEnroll() {
+        String userInput = "s3863893";
+        ByteArrayInputStream in = new ByteArrayInputStream(userInput.getBytes());
+        System.setIn(in);
 
-        ByteArrayInputStream idStudent = new ByteArrayInputStream("s3863893".getBytes());
-        System.setIn(idStudent);
         ByteArrayInputStream name = new ByteArrayInputStream("Phan Ngan".getBytes());
         System.setIn(name);
         ByteArrayInputStream birthdate = new ByteArrayInputStream("08/11/2001".getBytes());
@@ -56,9 +55,17 @@ public class StudentEnrolmentTest {
         System.setIn(noCredit);
         ByteArrayInputStream semester = new ByteArrayInputStream("2021A".getBytes());
         System.setIn(semester);
-        assertEquals(idStudent,name);
 
-        assertEquals("My string1", se.getInput());
+
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        PrintStream printStream = new PrintStream(baos);
+        System.setOut(printStream);
+        se.studentEnroll();
+
+        String expected = "You have been successfully added to the course!";
+
+        assertEquals(expected, se.studentEnroll());
 // optionally, reset to its original
         System.setIn(sysInBackup);
     }

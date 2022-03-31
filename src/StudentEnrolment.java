@@ -72,7 +72,7 @@ public class StudentEnrolment implements StudentEnrolmentManager {
 
     //Student enroll course
     @Override
-    public void studentEnroll() {
+    public double studentEnroll() {
 
         //taking info from student
         System.out.println("Enter your ID: ");
@@ -111,6 +111,7 @@ public class StudentEnrolment implements StudentEnrolmentManager {
             }
         }
 
+        return noCredits;
     }
 
     // enter the id o confirm to update or delete

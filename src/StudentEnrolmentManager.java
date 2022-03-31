@@ -1,6 +1,6 @@
 
 public interface StudentEnrolmentManager {
-    public void studentEnroll();
+    public double studentEnroll();
     public int update();
     public int deleteEnroll();
     public void viewCourseEnrolled();
