@@ -14,7 +14,6 @@ public class StudentEnrolmentTest {
 
     @Before
     public void setUp() throws Exception {
-
     }
 
     @After
@@ -31,8 +30,7 @@ public class StudentEnrolmentTest {
     @Test
     public void viewAllData() throws IOException {
         loadInfo();
-        String expected ="S101312; Alex Mike; 12/12/1999; COSC4030; Theory of Computation; 5; 2020C\n" ;
-
+        
 
 
     }
