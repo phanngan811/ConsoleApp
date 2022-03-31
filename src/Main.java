@@ -49,7 +49,7 @@ public class Main {
     public static void showEnrollment(){
         System.out.println("Hi guys, welcome to my program, Thank you so much ");
         System.out.println("1. Loading the students and courses from file ");
-        System.out.println("2. View all the courses that you enrolled in a semester ");
+        System.out.println("2. View all the courses that you enrolled");
         System.out.println("3. Student enrol the course");
         System.out.println("4. Update a Student and a course");
         System.out.println("5. Delete a Student and a course enrolled");
