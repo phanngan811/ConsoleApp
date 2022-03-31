@@ -59,7 +59,7 @@ public class StudentEnrolment implements StudentEnrolmentManager {
     public void viewAllData() {
         //condition for checking all ArrayList == 0
         if (studentList.size() == 0 && courseList.size() == 0 && semesterList.size() == 0)
-            System.out.println("Please !! Load the file before View");
+            System.out.println("Please select number 1 before select this one");
         else {
             //If they are != 0 -> print all data
             for (int i = 0; i < studentList.size(); i++) {
