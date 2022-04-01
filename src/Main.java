@@ -4,6 +4,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
+        System.out.println("Hi guys, welcome to my program, Thank you so much ");
+
         Scanner scanner = new Scanner(System.in);
         String choose = null;
         boolean exit = false;
@@ -47,7 +49,7 @@ public class Main {
         }
     }
     public static void showEnrollment(){
-        System.out.println("Hi guys, welcome to my program, Thank you so much ");
+        //System.out.println("Hi guys, welcome to my program, Thank you so much ");
         System.out.println("1. Loading the students and courses from file ");
         System.out.println("2. View all the courses that you enrolled");
         System.out.println("3. Student enrol the course");
@@ -56,6 +58,7 @@ public class Main {
         System.out.println("6. View all the student and course");
         System.out.println("7. Quit programming ");
         System.out.print("Select a function (1-7): ");
+
     }
 
 }

@@ -29,7 +29,7 @@ public class StudentEnrolment implements StudentEnrolmentManager {
 
         try (
                 // creating file name
-                InputStream fileInputStream = new FileInputStream("Info.csv");
+                InputStream fileInputStream = new FileInputStream("./src/default.csv");
                 InputStreamReader reader = new InputStreamReader(fileInputStream, Charset.forName("UTF-8"));
                 BufferedReader br = new BufferedReader(reader);
         ) {

@@ -30,7 +30,24 @@ public class StudentEnrolmentTest {
     @Test
     public void viewAllData() throws IOException {
         loadInfo();
-        
+        String expected ="S101312; Alex Mike; 8/11/2001; COSC4030; Theory of Computation; 5; 2020C\n" +
+                "S102732; Mark Duong; 8/28/2001; COSC4030; Theory of Computation; 5; 2020C\n" +
+                "S103723; Hai Hoang Vu; 4/25/2000; BUS2232; Business Law; 3; 2020B\n" +
+                "S103821; Son Minh Doan; 2/3/2000; PHYS1230; Introductory Human Physiology; 4; 2021A\n" +
+                "S101163; Joseph Fergile; 5/9/1999; BUS2232; Business Law; 3; 2020C\n" +
+                "S101153; Jang Min Seon; 9/25/2000; COSC3321; Artificial Intelligence; 3; 2021A\n" +
+                "S103817; Thuy Thu Nguyen; 3/4/2000; COSC3321; Artificial Intelligence; 3; 2021A\n" +
+                "S103912; Son Thanh Le; 2/9/2001; BUS2232; Business Law; 3; 2020C\n" +
+                "S102192; Mark Patterson; 6/5/2000; PHYS1230; Introductory Human Physiology; 4; 2021A\n" +
+                "S103192; Ngan Thu Vo; 3/9/1998; BUS2232; Business Law; 3; 2020B\n" +
+                "S101312; Alex Mike; 8/11/2001; PHYS1230; Introductory Human Physiology; 4; 2021A\n" +
+                "S103817; Thuy Thu Nguyen; 3/4/2000; COSC4030; Theory of Computation; 5; 2020C\n" +
+                "S101163; Joseph Fergile; 5/9/1999; COSC3321; Artificial Intelligence; 3; 2021A\n" +
+                "S102732; Mark Duong; 8/28/2001; COSC3321; Artificial Intelligence; 3; 2021A\n" +
+                "S101312; Alex Mike; 8/11/2001; BUS2232; Business Law; 3; 2020C";
+
+        //assertEquals(expected, se.viewAllData());
+
 
 
     }
@@ -57,7 +74,6 @@ public class StudentEnrolmentTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(baos);
         System.setOut(printStream);
-        se.studentEnroll();
 
         String expected = "You have been successfully added to the course!";
 
